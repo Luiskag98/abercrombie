@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8081:80"  # Cambia 8081 por el puerto que desees usar en el host
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html
+      - ./netbox.webp:/usr/share/nginx/html/netbox.webp
